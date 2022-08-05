@@ -166,13 +166,11 @@ void SimpleSimulation::on_pushButton_clicked()
     }    
 }
 
-
 static double fRand(double fMin, double fMax)
 {
     double f = (double)rand() / RAND_MAX;
     return fMin + f * (fMax - fMin);
 }
-
 
 void SimpleSimulation::storeDataRoutine()
 {
@@ -186,7 +184,6 @@ void SimpleSimulation::storeDataRoutine()
     dt = std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count() % 1000;
     
     // std::cout << dt << " temperature: " << temp_random << "\thumidity: " << humid_random << std::endl;
-
     dataTem.update(temp_random);
     dataHum.update(humid_random);
 
@@ -208,7 +205,6 @@ void SimpleSimulation::storeDataRoutine()
     hum_avg->add(dataAvgHum);
     hum_med->add(dataMedHum);
 }
-
 
 void SimpleSimulation::plotDataRoutine()
 {
@@ -235,7 +231,6 @@ void SimpleSimulation::plotDataRoutine()
     ui->HumidityPlot->update();
 }
 
-
 void SimpleSimulation::showLCDRoutine()
 {
     
@@ -248,7 +243,6 @@ void SimpleSimulation::showLCDRoutine()
     ui->HumidityAverage->display(dataHum.getAverage());
     ui->HumidityMedian->display(dataHum.getMedian());
 }
-
 
 void SimpleSimulation::Update()
 {

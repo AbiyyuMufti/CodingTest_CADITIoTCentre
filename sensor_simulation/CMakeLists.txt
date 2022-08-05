@@ -27,3 +27,5 @@ target_link_libraries(sensor_simulation
   ${CURL_LIBRARIES}
   coding_test_util
 )
+
+install(TARGETS sensor_simulation)

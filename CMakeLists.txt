@@ -31,3 +31,8 @@ target_link_libraries(sensor_aggregation coding_test_util ${JSONCPP_LIBRARIES} $
 
 add_subdirectory(sensor_simulation)
 add_subdirectory(test)
+
+install(TARGETS salary_conversion)
+install(TARGETS sensor_aggregation)
+
+
