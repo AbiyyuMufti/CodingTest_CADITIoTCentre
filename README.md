@@ -65,4 +65,3 @@ Lastly, to execute the unittest
 ```
 ./test/UtilityTest
 ```
-## Run from installed binary
